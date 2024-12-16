@@ -15,7 +15,7 @@ import os
 # st.write("Files in Models Directory:", os.listdir('./models/win_probability'))
 
 # Load model
-model_path = './models/xgb_win_prob_model.pkl'
+model_path = './models/win_probability/xgb_win_prob_model.pkl'
 
 with open(model_path, 'rb') as f:
     model = pickle.load(f)
