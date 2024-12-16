@@ -7,6 +7,13 @@ from display_game_state import display_game_state
 from display_victory_defeat_screen import display_victory_defeat_screen
 from plot_win_probability import plot_win_probability
 
+
+import os
+
+st.write("Current Working Directory:", os.getcwd())
+st.write("Files in Current Directory:", os.listdir('./'))
+st.write("Files in Models Directory:", os.listdir('./models/win_probability'))
+
 # Load model
 model_path = os.path.join('models', 'win_probability', 'xgb_win_prob_model.pkl')
 with open(model_path, 'rb') as f:
