@@ -13,7 +13,7 @@ with open(model_path, 'rb') as f:
     model = pickle.load(f)
 
 # Load data
-data = pd.read_csv('./data/replay_data_public.DSK.PremierDraft.csv', nrows=200)
+data = pd.read_csv('./data/replay_data_small.csv')
 
 # Import custom functions
 from transform_row_to_turns import transform_row_to_turns
