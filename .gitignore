@@ -1,0 +1,6 @@
+# Ignore only the specific file
+/data/replay_data_public.DSK.PremierDraft.csv
+
+# Allow tracking of all other files in the data folder
+!data/
+!data/*.csv
