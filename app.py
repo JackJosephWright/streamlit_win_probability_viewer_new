@@ -14,11 +14,14 @@ import os
 # st.write("Files in Current Directory:", os.listdir('./'))
 # st.write("Files in Models Directory:", os.listdir('./models/win_probability'))
 
-# Load model
+
 model_path = './models/win_probability/xgb_win_prob_model.pkl'
 
-with open(model_path, 'rb') as f:
-    model = pickle.load(f)
+if os.path.exists(model_path):
+    with open(model_path, 'rb') as f:
+        model = pickle.load(f)
+else:
+    st.write(f"Error: Model file not found at {model_path}")
 
 # Load data
 data = pd.read_csv('./data/replay_data_small.csv')
